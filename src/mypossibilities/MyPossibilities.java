@@ -6,21 +6,8 @@ public class MyPossibilities {
 
     public static void main(String[] args) {
         int array[] = {0, 1, 2, 3, 4, 5, 6, 7};
-        //bubbleSort(array);
-        int temp = factorial(4);
-        System.out.println(temp);
-    }
-    public static int factorial(int a){
-        if(a==0){
-            return 1;
-        }
-        if(a == 1){
-            return 1;
-        }
-        else{
-            return a*(a-1);
-        }
-       
+        bubbleSort(array);
+        
     }
 
     static void bubbleSort(int array[]) {
