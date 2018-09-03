@@ -18,6 +18,8 @@ public class MyPossibilities {
 
     public static void main(String[] args) {
         int array[] = {5,5,4,7,8,3,2,9,1}; // you can construct a list of any size and any numbers
+        
+        System.out.println("Every possible list permutation: \n");
         bubbleSort(array);
         
     }
