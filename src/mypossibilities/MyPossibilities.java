@@ -1,3 +1,15 @@
+//Name: Aashna Lakhani
+//CMPS 340 (Alogrithm Design and Analysis) - University of Louisiana at Lafayette
+//Completed on August 31st, 2018
+/*
+Problem/objective: Give an algorithm for the following problem: Given a list of n distinct positive
+integers, partition the list into two sublists, each of size n/2, such that the difference between the
+sums of integers in the two sublists is minimized. Determine the time complexity of your
+algorithm. You may assume that n is a multiple of 2. 
+*/
+
+//Method: Modified the bubble sort algorithm to find all possible combinations of numbers in two sublists divided from an orginal main list of size n. After, differences between the sums of each sublist was compared. The best was kept.
+ 
 package mypossibilities;
 
 import java.lang.Math;
@@ -5,12 +17,12 @@ import java.lang.Math;
 public class MyPossibilities {
 
     public static void main(String[] args) {
-        int array[] = {0, 1, 2, 3, 4, 5, 6, 7};
+        int array[] = {5,5,4,7,8,3,2,9,1}; // you can construct a list of any size and any numbers
         bubbleSort(array);
         
     }
 
-    static void bubbleSort(int array[]) {
+    static void bubbleSort(int array[]) { //modified bubble sort, exceptions are removed from original (if statement)
         int n = array.length; //8
         int temp;
         int count = 0;
@@ -57,14 +69,15 @@ public class MyPossibilities {
             }
         }
         System.out.println();
-        System.out.println("We found " + count + " total combinations.");
+        System.out.println("Found " + count + " total combinations.");
         System.out.print("The minimum difference of two sublists is " + lowestsum);
         System.out.println();
-        System.out.println("The most fantastic list is: ");
+        System.out.println("The best list is: ");
         for (int w = 0; w < n; w++) {
             System.out.print(rightarray[w]);
         }
         System.out.println();
         System.out.println("Hours of work spent on this idea / code: 10");
+        System.out.println("Time complexity of code: O(n^3)");
     }
 }
