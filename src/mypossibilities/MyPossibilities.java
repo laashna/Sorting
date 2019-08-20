@@ -1,6 +1,4 @@
-//Name: Aashna Lakhani
-//CMPS 340 (Alogrithm Design and Analysis) - University of Louisiana at Lafayette
-//Completed on August 31st, 2018
+
 /*
 Problem/objective: Give an algorithm for the following problem: Given a list of n distinct positive
 integers, partition the list into two sublists, each of size n/2, such that the difference between the
