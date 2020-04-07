@@ -11,15 +11,35 @@ algorithm. You may assume that n is a multiple of 2.
 package mypossibilities;
 
 import java.lang.Math;
+import java.util.Scanner;
 
 public class MyPossibilities {
 
     public static void main(String[] args) {
-        int array[] = {5,5,4,7,8,3,2,9,1}; // you can construct a list of any size and any numbers
+
         
+        //int array[] = {5,5,4,7,8,3,2,9,1}; // you can construct a list of any size and any numbers
+        
+        //add user input functionality
+        int index;
+        int indexValue;
+        int newArray[];
+        Scanner numberOfNumbersInList = new Scanner(System. in);
+        Scanner enteredNumber = new Scanner(System. in);
+
+        System.out.println("How many numbers in a list?");
+        index = numberOfNumbersInList.nextInt();
+        newArray = new int[index];
+
+        for(int i = 0; i <= index-1; i++){
+            System.out.println("Enter the number: ");
+            indexValue = enteredNumber.nextInt();
+            newArray[i] = indexValue;
+        }
+
         System.out.println("Every possible list permutation: \n");
-        bubbleSort(array);
-        
+        bubbleSort(newArray);
+
     }
 
     static void bubbleSort(int array[]) { //modified bubble sort, exceptions are removed from original (if statement)
